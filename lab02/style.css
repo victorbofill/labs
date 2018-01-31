@@ -1,0 +1,24 @@
+body {
+  background: pink;
+  color: yellow;
+}
+
+header {
+  color: black;
+}
+
+nav p {
+  display: inline;
+}
+
+article {
+  background-color: red;
+}
+
+.questions {
+  background-color: orange;
+}
+
+p.questions {
+  font-size: 20px;
+}

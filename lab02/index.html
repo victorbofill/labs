@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello World?</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- TODO replace divs with semantic tags -->
+        <header>
+            <nav>
+                <p>Link A</p>
+                <p>Link B</p>
+          </nav>
+        </header>
+        
+        <main>
+            <section>
+                <h1 contenteditable>Hello World!</h1>
+                <article>
+                    <h2>About this site</h2>
+                    <p>This is a paragraph.</p>
+                </article>
+                <article>
+                    <h2>About Me</h2>
+                    <p>
+                        I went to the zoo on Sunday and saw <span>a bunch of animals</span>! 
+                        In order, my favorites were: the flamingoes, the river otters, the tiger, and the chimpanzee.
+                    </p>
+                </article>
+            </section>
+
+            <section class="questions">
+                <h2>Let's Chat</h2>
+                <p>What's your name?</p>
+                <p>What is your favorite dessert?</p>
+                <p>How many countries have you visited?</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; SJC 2018</p>
+        </footer>
+        <!-- TODO move our JS to its own file so it's not cluttering up our HTML -->
+        <script>
+            // TODO save all the answers in an array and console it out at the end of our script
+            // TODO if their name is Louis, tell them they're great
+            // TODO if their name starts with an S, yell it back at them
+            const name = prompt('What is your name?');
+            console.log('their name is: ' + name);
+            
+            // TODO if they like fries, ask who has the best fries: LBB or Burgerville
+            // TODO allow them to enter "lbb" or "LBB" or "Little Big Burger"
+            // TODO give different responses based on their selection
+            const likesFries = confirm('Do you like french fries?');
+            console.log('likes fries: ' + likesFries);
+        </script>
+    </body>
+</html>

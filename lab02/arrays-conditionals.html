@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays, Operators, Conditional Statements</title>
+    </head>
+    <body>
+        <section>
+            <h1>Topics</h1>
+
+            <h4>Arrays</h4>
+            <p>Allow us to group similar or related data.</p>
+
+            <h4>Operators</h4>
+            <p>Allow us to change or create data.</p>
+
+            <h4>Conditional Statements</h4>
+            <p>Allow us to control what code runs based on certain data.</p>
+        </section>
+        <script>
+            /* 1. Arrays
+                - creating arrays
+                - adding elements to an array
+                - properties and methods of an array
+                - accessing elements in an array
+            */
+
+            /*         
+            // arrays are collections of data items:
+            // ['a', 'b', 'c', 'd'];
+            // they are indexed beginning with 0. In this array, a === 0, b === 1, etc.
+
+            // the following creates an array named 'seals' and populates it with three names as items
+            const seals = ['Hank', 'Sally', 'George'];
+
+            const numbers = [5, 4, 3, 2, 100];
+            const dataTypes = ['a string', 400, true, null, undefined]
+
+            //console.log(seals[2]);// displays 'George', the '2' of the array
+
+            //METHODS let us affect the data of the array
+
+            // array.length returns the number of items in the array
+            console.log('seals length is' + seals.length);
+
+            // array.push adds the argument to the end of the array. can be used to add multiple items
+            seals.push('Francine'); 
+            console.log('before push: ' + seals);
+            console.log('after push: ' + seals);
+            seals.push('George 2', 'Gina', 'Alice'); 
+            console.log('after pushing multiple' + seals);
+
+            // array.pop() removes the last data entry from the targeted array
+            seals.pop();
+            console.log('after pop: ' + seals);
+
+            // array.includes(); checks whether the argument is an item of the array
+            console.log(seals.includes('Paul'));
+            console.log(seals.includes('Sally'));
+
+            // array.slice() coppies an array
+            seals.slice();          
+            
+            // array.splice(); adds and removes items from an array
+            // in the below example, 4 is the starting item. 1 is the number to be deleted
+            seals.splice(4,1);
+            console.log(' ' + seals);
+
+            // array.indexOf returns the index number of the first instance of the item within the array
+            // return is -1 if it is not included
+            console.log("'Sally' has an index of :" + seals.indexOf('Sally'));
+
+            /* Bonus: String methods! */
+            /*
+            // seals.toUpperCase(); fails, because seals is ineligible
+            //console.log('george'.toUpperCase()); // will work because it points to the literal 'george'
+            //console.log(seals[1].toUpperCase()); // will work because it points to a specific string
+
+            // the following finds the index # of 'Sally' and runs the .toUpperCase method on it
+            console.log(seals[seals.indexOf('Sally')].toUpperCase());
+            // the system sees this the same as below
+            console.log((seals[1]).toUpperCase());
+            */
+
+            /* 2. Operators
+                - arithmetic
+                - comparison
+                - logical
+            */
+            
+            // arithmetic //
+            // JS can do al typical math operators. addition, subtraction, multiplaction, divison, and moduo
+            // the + operator can be used specifically with strings. 'concatenate'
+            // the above can add strings and numbers together. this returns the numbers into a string
+
+            // comparison //
+            // == can look into strings and see numbers. the following will return 'true'
+            // 5 == '5';
+
+            // === is a strict comparison. it cannot 'see' numbers in strings. the following returns 'false'
+            // 5 === '5';
+
+            // logical  //
+            // falsie values: undefined nul 0 "" NaN false
+            
+            /* Evaluating an expression
+                - what data does this code reference? become? provide?
+            */
+
+            /* 3. Conditional Statements
+                - if statements
+                - if/else statements
+                - if/else if statements
+                - switch statements
+            */
+                        
+            // the below code changes the prompt response to lower case, to reduce potential outcomes
+            // const wantsToSee = prompt('Something: ').toLowerCase();
+
+            // the below does the same as above
+            // let wantsToSee = prompt('Something: ');
+            // wantsToSee = wantsToSee.toLowerCase;
+
+            // you can also do the below
+            // if (wantsToSee.toLowerCase);
+            
+            const plants = 5;
+
+            if (plants){
+                console.log('cool');
+            } else {
+                console.log('not cool');
+            }
+            
+        </script>
+    </body>
+</html>
