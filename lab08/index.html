@@ -20,8 +20,39 @@
         </style>
     </head>
     <body>
+        <!-- TODO build a form! -->
+        <form> <!-- attach the event listener to the form itself -->
+            <fieldset>
+                <legend>New Post Information</legend>
+
+
+                <label for="title">Title</label> <!-- The 'for' attribute points at the id of the input -->
+                <input type="text" id="title" name="title">
+
+                <!-- <label for="content">Write Stuff</label> -->
+                <!-- <input type="text" id="content" name="content"> -->
+
+                <label for="content">Content</label>
+                <textarea id="content" name="text"></textarea>
+
+
+                <!-- <label for="tags">Tags (separate by comma)</label> -->
+                <!-- <input type="text" id="tags" name="tags"> -->
+
+                <label for-"cat-tag">cat</label>
+                <input type="checkbox" name="tags" id="cat-tag" value="cat"> <!-- having the same name groups these tags together -->
+
+                <label for-"lorem-tag">lorem</label>
+                <input type="checkbox" name="tags" id="lorem-tag" value="lorem">
+
+                <button type="submit">Publish</button>
+
+
+
+            </fieldset>
+        </form>
+
         <section id="posts">
-            <!-- TODO build a form! -->
             <article class="post">
                 <h1>Leaves are cool</h1>
                 <p>
