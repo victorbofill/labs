@@ -1,19 +1,5 @@
 'use strict';
 
-const form = document.querySelector('form');
-form.addEventListener('submit', function () {
-    event.preventDefault();
-    console.log('Submitted!');
-
-    // const title = document.getElementById('title').value; //the .value gets the value of the element, rather than the element
-    // console.log('The title the wrote was: ', title);
-
-    console.log(this.title.value); // attributes on an html element are amost always properties of their object
-    console.log(this.tags.value);
-    console.log(this.text.value); // content in this case is the name of the element
-
-});
-
 function Post (title,content,tags) {
     this.title = title;
     this.content = content;
@@ -89,9 +75,29 @@ const postC = new Post(
     ['lorem','potato']
 );
 
-// const posts = [postA,postB,postC];
-// for (let i = 0; i < posts.length; i++) {
-//     posts[i].publish();
-// }
+const posts = [postA,postB,postC];
+for (let i = 0; i < posts.length; i++) {
+    posts[i].publish();
+}
 
-// TODO add submit event listener to our form
+const modal = document.getElementById('modal');
+const form = document.querySelector('form');
+form.addEventListener('submit', function () {
+    event.preventDefault();
+
+    const title = document.getElementById('title').value;
+    const content = this.text.value;
+    // const tags = this.tags;
+
+    const newPost = new Post (title, content);
+    newPost.publish();
+
+    this.classList.remove('open');
+    modal.classList.remove('open');
+});
+
+const addPostBtn = document.getElementById('new-post');
+addPostBtn.addEventListener('click', function () {
+    form.classList.add('open');
+    modal.classList.add('open');
+});
